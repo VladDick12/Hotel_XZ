@@ -1,0 +1,48 @@
+﻿<Window x:Class="To_book_Hotel.MenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:To_book_Hotel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+
+        <TextBlock HorizontalAlignment="Left" Grid.Column="0" TextWrapping="Wrap" Text="Имя:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фамилия:" VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Left"  Grid.Row="0" TextWrapping="Wrap" Text="Кол-во человек:" VerticalAlignment="Bottom"/>
+
+        <TextBox x:Name="name" HorizontalAlignment="Right" Text="" VerticalAlignment="Top" Width="82"/>
+        <TextBox x:Name="lastname" HorizontalAlignment="Right" Grid.Row="0"  Text="" VerticalAlignment="Center" Width="83"/>
+        <TextBox x:Name="people" HorizontalAlignment="Right" Text="" VerticalAlignment="Bottom" Width="42"/>
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Дата заселения" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center"   Text="Дата выезда" VerticalAlignment="Top" Width="79"/>
+
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Grid.ColumnSpan="2"  Grid.RowSpan="2" VerticalAlignment="Bottom" Grid.Row="1"/>
+
+        <TextBlock Name="date" Grid.Column="1" HorizontalAlignment="Center"  Text=" " VerticalAlignment="Center" Width="59"/>
+        <TextBlock Name="date2" Grid.Column="2" HorizontalAlignment="Center"   Text=" " VerticalAlignment="Center" Width="59"/>
+
+        <Button Name="btn" Grid.Column="1" Content="Ok" HorizontalAlignment="Center" Margin="0,69,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Name="btn2" Grid.Column="2" Content="Ok" HorizontalAlignment="Center" Margin="0,69,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+        <Calendar x:Name="calendar2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="179" Grid.ColumnSpan="2"  Grid.RowSpan="3"/>
+        
+        <Button Grid.Column="2" Content="Забронировать" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_2"/>
+
+
+    </Grid>
+</Window>
